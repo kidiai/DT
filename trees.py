@@ -16,6 +16,19 @@ def createDataSet():
     #change to discrete values
     return dataSet, labels
 
+def createDataSet2():
+    dataSet = [[1, 0, 0, 'a'],
+               [1, 1, 0, 'o'],
+               [0, 2, 1, 'a'],
+               [0, 0, 0, 'a'],
+               [1, 2, 1, 'a'],
+               [1, 0, 1, 'a'],
+               [1, 2, 0, 'o'],
+               [0, 2, 0, 'o']]
+    labels = ['tall','hair', 'eye']
+    #change to discrete values
+    return dataSet, labels
+    
 def calcShannonEnt(dataSet):
     numEntries = len(dataSet)
     labelCounts = {}
