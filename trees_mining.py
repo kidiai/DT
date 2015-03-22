@@ -6,8 +6,8 @@ Decision Tree Source Code for Machine Learning in Action Ch. 3
 from math import log
 import operator
 
-def createDataSet():
-    f = open("test.txt", 'r')
+def createDataSet(fp):
+    f = open(fp, 'r')
     i=0
     lines = f.readlines()
     dataSet = []
@@ -21,9 +21,9 @@ def createDataSet():
                [1, 0, 'no'],
                [0, 1, 'no'],
                [0, 1, 'no']]"""
-    labels = ['Age','Has_job', 'Own_house', 'Credit_rating']
+    #labels = ['Age','Has_job', 'Own_house', 'Credit_rating']
     #change to discrete values
-    return dataSet, labels
+    return dataSet#, labels
 
     
 def calcShannonEnt(dataSet):
